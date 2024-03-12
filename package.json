@@ -18,7 +18,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,json,html,md}": [
-      "prettier --write src/"
+      "prettier --write --fix src/"
     ]
   },
   "config": {
