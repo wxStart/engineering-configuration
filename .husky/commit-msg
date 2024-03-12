@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+red=$(tput setaf 1)
+green=$(tput setaf 2)
+reset=$(tput sgr0)
+
+printf "\n《《《%s开始检测commit描述是否符合规范...%s\n" "${green}" "${reset}"
+
+if ! npx --no -- commitlint --edit $1 ; then
+    echo "《《《${red}commit描述检测到异常，请按规范填写commit描述！${reset}"
+    exit 1;
+fi
+printf "《《《%s恭喜你，非常规范！%s\n" "${green}" "${reset}"
+exit
