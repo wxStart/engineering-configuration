@@ -14,12 +14,23 @@
     "lint:style": "stylelint src/**/*.{css,scss,vue} --cache --fix",
     "prepare": "husky install",
     "format-code": "bash .husky/format-code.sh",
-    "check-conflict": "bash .husky/check-conflict.sh"
+    "check-conflict": "bash .husky/check-conflict.sh",
+    "commit": "git add -A && git-cz"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,json,html,md}": [
       "prettier --write src/"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "vue": "^3.4.21"
@@ -31,6 +42,8 @@
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-vue": "^5.0.4",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
