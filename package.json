@@ -16,6 +16,17 @@
     "check-conflict": "bash .husky/check-conflict.sh",
     "commit": "git add . && cz-customizable"
   },
+  "linters": {
+    "*.{json,md,scss}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,json,html,md}": [
       "prettier --write --fix src/"
