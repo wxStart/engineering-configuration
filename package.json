@@ -14,7 +14,7 @@
     "prepare": "husky install",
     "format-code": "bash .husky/format-code.sh",
     "check-conflict": "bash .husky/check-conflict.sh",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && cz-customizable"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,json,html,md}": [
