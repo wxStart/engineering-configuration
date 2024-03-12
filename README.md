@@ -254,6 +254,23 @@ exit
 
 ```
 
+### 提交汉化版
+
+1. 安装依赖
+   `pnpm  i  -D  commitizen cz-conventional-changelog cz-customizable commitlint-config-cz`
+2. .cz-config.js 文件
+
+3. 修改脚本
+
+```json
+
+ "scripts": {
+   "commit": "git add . && cz-customizable"
+  },
+
+
+```
+
 ### 最终脚本为
 
 ```json
