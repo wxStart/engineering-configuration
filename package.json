@@ -3,7 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "node ./scripts/preinstall.js",
+    "predev": "node ./scripts/check-pm.js",
     "dev": "vite --open",
+    "prebuild": "node ./scripts/check-pm.js",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src",
@@ -14,7 +17,8 @@
     "prepare": "husky install",
     "format-code": "bash .husky/format-code.sh",
     "check-conflict": "bash .husky/check-conflict.sh",
-    "commit": "git add . && cz-customizable"
+    "commit": "git add . && cz-customizable",
+    "check-pm": ""
   },
   "linters": {
     "*.{json,md,scss}": [

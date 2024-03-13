@@ -62,4 +62,4 @@ module.exports = {
   // 跳过问题
   skipQuestions: ['body', 'footer'],
   subjectLimit: 72,
-}
+};

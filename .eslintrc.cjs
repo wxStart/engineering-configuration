@@ -1,4 +1,4 @@
-const isDev = process.env.NODE_ENV === 'production';
+const isDev = process.env.NODE_ENV === 'production'
 
 module.exports = {
   env: {
@@ -56,10 +56,11 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-namespace': 'off', // 禁正使用自定义-TypeScript.
     '@typescript-eslint/semi': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
 
     'vue/multi-word-component-names': 'off',
     'vue/script-setup-uses-vars': 'error',
     'vue/no-mutating-props': 'off',
     'vue/attribute-hyphenation': 'off',
   },
-};
+}

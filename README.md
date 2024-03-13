@@ -298,3 +298,16 @@ exit
   }
 }
 ```
+
+## 统一包谷哪里工具
+
+1. 新建文件`script/preinstall.js`
+
+2. 修改脚本
+
+```json
+"scripts": {
+    "preinstall": "node ./scripts/preinstall.js",
+    //  ...
+  },
+```
